@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;bg.infosys.interns.mregister.core.paging.PaigingSorting.java&apos; to &apos;PagingSorting.java&apos;&#x0D;&#x0A;- Original project: &apos;movie-register-core&apos;&#x0D;&#x0A;- Original element: &apos;bg.infosys.interns.mregister.core.paging.PaigingSorting.java&apos;&#x0D;&#x0A;- Renamed element: &apos;bg.infosys.interns.mregister.core.paging.PagingSorting.java&apos;" description="Rename compilation unit &apos;PaigingSorting.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;bg.infosys.interns.mregister.core.paging{PaigingSorting.java" name="PagingSorting.java" references="false" stamp="1631177625386" version="1.0"/>
+</session>

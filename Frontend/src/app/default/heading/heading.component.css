@@ -1,0 +1,33 @@
+.header, .language {
+    background-color:#80c4ca;
+    border: rgb(60, 0, 128);
+}
+
+.header {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.heading {
+    display: inline;
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgb(145, 240, 235);
+    margin-left: 20px;
+    vertical-align: top;
+}
+
+.language {
+    margin-right: 40px;
+}
+
+.btn:active {
+    background-color: teal;
+}
+
+

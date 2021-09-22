@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>bg.infosys.interns</groupId>
+		<artifactId>movie-register</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>movie-register-ws</artifactId>
+	<packaging>war</packaging>
+	<name>movie-register-ws</name>
+	<description>Movie Register Web-Service Project</description>
+
+	<properties>
+		<!-- Infosys Common WS -->
+		<v.infosys.common.ws>1.7</v.infosys.common.ws>
+
+		<!-- Javax Servlet Api Version -->
+		<v.javax.servlet>3.0.1</v.javax.servlet>
+		
+		<!-- Javax Validation Version -->
+		<v.javax.validation>2.0.1.Final</v.javax.validation>
+
+		<!-- Hibernate Validator Version -->
+		<v.hibernate.validator>6.1.5.Final</v.hibernate.validator>
+	</properties>
+
+	<dependencies>
+		<!-- DB Project Dependency -->
+		<dependency>
+			<groupId>bg.infosys.interns</groupId>
+			<artifactId>movie-register-core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- Infosys Common WS Dependency -->
+		<dependency>
+			<groupId>bg.infosys.common</groupId>
+			<artifactId>infosys-common-ws</artifactId>
+			<version>${v.infosys.common.ws}</version>
+		</dependency>
+
+		<!-- Javax Servlet Api -->
+		<dependency>
+		    <groupId>javax.validation</groupId>
+		    <artifactId>validation-api</artifactId>
+		    <version>${v.javax.validation}</version>
+		</dependency>
+		
+		<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.18.20</version>
+		<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${v.javax.servlet}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${v.hibernate.validator}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator-annotation-processor</artifactId>
+			<version>${v.hibernate.validator}</version>
+		</dependency>
+	</dependencies>
+</project>

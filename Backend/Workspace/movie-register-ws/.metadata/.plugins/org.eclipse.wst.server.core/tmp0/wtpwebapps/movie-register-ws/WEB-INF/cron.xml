@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:zkc="http://www.zkoss.org/2008/zkspring/core" xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+						http://www.springframework.org/schema/beans/spring-beans.xsd
+                        http://www.springframework.org/schema/task
+   						http://www.springframework.org/schema/task/spring-task.xsd">
+
+	<bean id="taskScheduler" class="org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler">
+		<property name="poolSize" value="2" />
+		<property name="waitForTasksToCompleteOnShutdown" value="true" />
+		<property name="rejectedExecutionHandler">
+			<bean class="java.util.concurrent.ThreadPoolExecutor$AbortPolicy" />
+		</property>
+	</bean>
+	
+  	<task:scheduled-tasks scheduler="taskScheduler">
+  		<task:scheduled ref="scheduledTasks"		method="generateActor"		cron="0 0 1 ? * *"/> <!-- 0 * * ? * * minute! -->
+	</task:scheduled-tasks>
+
+</beans>

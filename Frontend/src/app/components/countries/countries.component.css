@@ -1,0 +1,44 @@
+.tableRow {
+    background-color:#98c5c9
+    }
+    
+    thead :hover {
+        cursor: pointer;
+    }
+    
+    .text.danger {
+        color:red;
+    }
+    
+    .upperSection {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .btn-default {
+        width: 40%;
+        text-align: center;
+        left: 274px;
+    }
+    
+    table {
+        table-layout: fixed;
+    }
+    
+    thead :hover {
+        cursor: pointer;
+    }
+    
+    .search-btn {
+        color: white;
+        background-color: teal;
+    }
+    
+    table{
+        table-layout: fixed;
+    }
+    
+    thead :hover{
+        cursor: pointer;
+    }
+    

@@ -1,0 +1,49 @@
+<div class = "upperSection">
+    <app-country-searchbar [countrySearchModel]="countrySearchModel"
+    (searchForMe)="search()"
+    (clearForMe)="clear()">
+  </app-country-searchbar>
+    <div class="text-right">
+      <a class="btn search-btn" (click)="clickSave()" data-toggle="modal" data-target="#modalForm"> {{ 'MODAL.ADD' | translate }} </a>
+    </div>
+</div>
+  
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr class="tableRow">
+        <th scope="col">#</th>
+        <th scope="col" (click)="sort('name')">  {{ 'COUNTRY_TABLE.NAME' | translate }}  
+            <span *ngIf="sortingPaging.getSortBy() === 'name'">
+                <span *ngIf="sortAsc">
+                  <img src="./assets/icons/arrow-up.svg">
+                </span>
+      
+                <span *ngIf="sortAsc === false">
+                  <img src="./assets/icons/arrow-down.svg">
+                </span>
+              </span>
+      
+        </th>
+        <th> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of countries let i = index" [attr.data-index]="i">
+        <th scope="row">{{country.code}} </th>
+        <td>{{country.name}}</td>
+        <td>
+          <button class="btn btn default" (click)="clickUpdate($event)" data-toggle="modal" data-target="#modalForm"> <img src="./assets/icons/pencil.svg"/> </button>
+          <button class="btn btn-default" (click)="clickDelete()"> <img src="./assets/icons/trash.svg"/> </button>
+        </td>
+      </tr>
+    </tbody>
+  </table> 
+   <app-paging [pageIndex]="sortingPaging.pageIndex" [pageSize]="sortingPaging.pageSize"
+  [isPrevBtnDisabled]="isPrevBtnDisabled" [isNextBtnDisabled]="isNextBtnDisabled"
+  (changePageIndexForMe)="pageIndexChanged($event)" (changePageSizeForMe)="pageSizeChanged($event)">
+  </app-paging> 
+  
+
+  <div *ngIf = "isClicked === true">
+  <app-country-detatils [countryOperation]="countryOperation" [country]="country"> </app-country-detatils> 
+</div>

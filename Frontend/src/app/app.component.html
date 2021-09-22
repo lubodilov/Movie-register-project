@@ -1,0 +1,8 @@
+<app-heading (lang) = "changeLang($event)"></app-heading>
+<div *ngIf = "(country == true)">
+  <h2> <a  routerLink="/countries" > Държави </a> </h2>
+</div>
+<div *ngIf = "(country == false)">
+  <h2> <a  routerLink="/countries" > Countries </a> </h2>
+</div>
+<router-outlet></router-outlet>

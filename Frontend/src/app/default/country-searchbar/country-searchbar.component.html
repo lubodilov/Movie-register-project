@@ -1,0 +1,9 @@
+<div class="input-group searchbar">
+        <input type="text" class="form-control" placeholder="{{ 'COUNTRY_SEARCHBAR.NAME' | translate }} ...." aria-label="Movie's name with search button" 
+            (keyup.enter)="search()"
+            [(ngModel)]="countrySearchModel.name">
+    <button class="btn btn-light search-btn" type="button" 
+            (click)="search()"> {{ 'BUTTON.SEARCH' | translate }} </button>
+    <button class="btn btn-light search-btn" type="button" 
+            (click)="clear()"> {{ 'BUTTON.CLEAR' | translate }} </button>
+</div>

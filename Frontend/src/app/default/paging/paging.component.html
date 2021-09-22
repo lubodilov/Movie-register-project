@@ -1,0 +1,24 @@
+<div class="paging">
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-end">
+        <li class="page-item"><button [ngClass]="('btn' + ' ' + 'page-link' + ' ' + 
+          (isPrevBtnDisabled ? 'disabled' : ''))" 
+          (click)="pageIndexChanged('prev')">-</button></li>
+        <li class="page-item active"><span class="btn current-page">{{pageIndex}}</span></li>
+        <li class="page-item"><button [ngClass]="('btn' + ' ' + 'page-link' + ' ' + 
+          (isNextBtnDisabled ? 'disabled' : ''))"
+          (click)="pageIndexChanged('next')">+</button></li>
+      </ul>
+    </nav>
+  
+    <div class="dropdown page-size">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        {{ 'PAGING.PAGE_SIZE' | translate }}: {{pageSize}}
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><button class="dropdown-item btn btn-primary" (click)="pageSizeChanged($event)">5</button></li>
+        <li><button class="dropdown-item btn btn-primary" (click)="pageSizeChanged($event)">10</button></li>
+        <li><button class="dropdown-item btn btn-primary" (click)="pageSizeChanged($event)">15</button></li>
+      </ul>
+    </div>
+  </div>

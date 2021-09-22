@@ -1,0 +1,20 @@
+<header>
+    <div class="pos-f-t">
+      <nav class="navbar navbar-dark header">
+        <div class="wrapper">
+        <span class="heading">{{ 'HEADER.TITLE' | translate }}</span>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle language" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          {{ 'HEADER.LANGUAGE' | translate }}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><button class="dropdown-item btn btn-primary" (click)="changeLang('bg')" >{{ 'HEADER.BULGARIAN' | translate }}<img src="https://cdn.britannica.com/04/6204-004-DC5CFE4F/Flag-Bulgaria.jpg" width="18" height = 10 /> </button></li>
+          <li><button class="dropdown-item btn btn-primary" (click)="changeLang('en')">{{ 'HEADER.ENGLISH' | translate }}<img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png" width="18" height = 10 /> </button></li>
+          
+        </ul>
+      </div>
+      </nav>
+    </div>
+  </header>
+  

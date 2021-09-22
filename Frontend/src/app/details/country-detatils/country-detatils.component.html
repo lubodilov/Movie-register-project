@@ -1,0 +1,120 @@
+    <div *ngIf = "(countryOperation =='update')">
+        <h4 class="w-100 font-weight-bold text-center">{{ 'MODAL.TITLE1' | translate }}</h4>
+    </div>
+    <div *ngIf = "(countryOperation =='save')">
+        <h4 class="w-100 font-weight-bold text-center">{{ 'MODAL.TITLE2' | translate }}</h4>
+    </div>
+
+    <div class="md-form mb-5">
+    <label data-error="wrong" data-success="right">{{ 'MODAL.CODE' | translate }}*</label>
+        <input [disabled]="(countryOperation =='update')"
+        class="form-control" 
+        placeholder="{{ 'COUNTRY_TABLE.CODE_PLACEHOLDER' | translate }} ...."
+        id="code"
+        [(ngModel)]="country.code" 
+        name="code">
+        <div *ngIf="(codeErrorMessage) != ''">
+        <em class = "text danger">{{ 'MODAL.CODE_ERROR_LENGTH' | translate }}</em> 
+        </div>
+        <div *ngIf="(codeEmptyMessage) != ''">
+        <em class = "text danger">{{ 'MODAL.CODE_ERROR_EMPTY' | translate }}</em> 
+        </div>
+    </div>
+
+    <div class="md-form mb-5">
+    <label data-error="wrong" data-success="right">{{ 'MODAL.NAME' | translate }}*</label>
+    <input 
+    type="text" 
+    class="form-control" 
+    placeholder="{{ 'COUNTRY_TABLE.NAME_PLACEHOLDER' | translate }} ...."
+    id="name" 
+    [(ngModel)]="country.name"
+    name="name">
+    <div *ngIf="(nameErrorMessage) != ''">
+    <em class = "text danger">{{ 'MODAL.NAME_ERROR_LENGTH' | translate }}</em> 
+    </div>
+    <div *ngIf="(nameEmptyMessage) != ''">
+    <em class = "text danger">{{ 'MODAL.NAME_ERROR_EMPTY' | translate }}</em> 
+    </div>
+    </div>
+
+    <div *ngIf = "(countryOperation =='save')">
+        <div class="modal-footer d-flex justify-content-center">
+        <button (click)="validateSave()" id="saveBtn" class="btn btn-success search-btn close btn">{{ 'MODAL.SAVE' | translate }}</button>
+        </div>
+
+        <div *ngIf="submitted==true" ng-init="myFunc()" class="alert alert-success" id="myAlert" >
+            {{ 'MODAL.SUCCESS1' | translate }}
+            </div>
+    </div>
+    <div *ngIf = "(countryOperation =='update')">
+        <div class="modal-footer d-flex justify-content-center">
+        <button (click)="validateSave()" id="saveBtn" class="btn btn-success search-btn close btn">{{ 'MODAL.UPDATE' | translate }}</button>
+        </div>
+
+        <div *ngIf="submitted==true" ng-init="myFunc()" class="alert alert-success" id="myAlert" >
+            {{ 'MODAL.SUCCESS2' | translate }}
+            </div>
+    </div>
+
+
+<!-- <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">TITLE</h4>
+        <button type="button" (click)="handleClose()" class="close btn" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <label data-error="wrong" data-success="right">CODE</label>
+            <input [disabled]="(countryOperation =='update')"
+            class="form-control" 
+            placeholder="CODE ...."
+            id="code" required 
+            [(ngModel)]="country.code" 
+            name="code">
+            <div *ngIf="(codeErrorMessage) != ''">
+             <em class = "text danger">CODE_ERROR_LENGTH</em> 
+            </div>
+            <div *ngIf="(codeEmptyMessage) != ''">
+              <em class = "text danger">CODE_ERROR_EMPTY</em> 
+             </div>
+        </div>
+
+        <div class="md-form mb-5">
+          <label data-error="wrong" data-success="right">NAME</label>
+          <input 
+          type="text" 
+          class="form-control" 
+          placeholder="NAME ...."
+          id="name" required
+          [(ngModel)]="country.name"
+          name="name"
+        />
+        <div *ngIf="(nameErrorMessage) != ''">
+          <em class = "text danger">NAME_ERROR_LENGTH</em> 
+         </div>
+         <div *ngIf="(nameEmptyMessage) != ''">
+          <em class = "text danger">NAME_ERROR_EMPTY</em> 
+         </div>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button (click)="validateSave()" id="saveBtn" class="btn btn-success search-btn close btn">SAVE</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="submitted==true" ng-init="myFunc()" class="alert alert-success" id="myAlert" >
+    Successful!
+  </div>
+</div> 
+<div class="text-center">
+    <a href="" class="btn btn-default" data-toggle="modal" data-target="#modalForm">Launch
+      Modal Login Form</a>
+  </div> -->

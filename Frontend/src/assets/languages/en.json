@@ -1,0 +1,51 @@
+{
+    "HEADER": {
+        "TITLE": "Movie register",
+        "LANGUAGE": "Languages",
+        "BULGARIAN": "Bulgarian",
+        "ENGLISH": "English",
+        "CHINESE": "Chinese"
+    },
+    "SIDEBAR": {
+        "MOVIES": "Movies",
+        "GENRES": "Genres",
+        "ACTORS": "Actors",
+        "AWARDS": "Awards",
+        "ORGANISATIONS": "Organisations"
+    },
+    "COUNTRY_TABLE": {
+        "NAME": "Name",
+        "NAME_PLACEHOLDER": "Name must be up to 128 characters",
+        "CODE_PLACEHOLDER": "Code must be up to 8 characters",
+        "CODE": "Code"
+    },
+    "MODAL": {
+        "TITLE1": "Change the data!",
+        "TITLE2": "Fill in the data and create new Country!",
+        "CODE": "Country's code",
+        "NAME": "Country's name",
+        "SAVE": "Save",
+        "UPDATE": "Update",
+        "ADD": "Add new",
+        "CODE_ERROR_EMPTY":"Code cannot be empty!",
+        "CODE_ERROR_LENGTH":"Length cannot be greater than 8 characters!",
+        "NAME_ERROR_EMPTY": "Name cannot be empty!",
+        "NAME_ERROR_LENGTH": "Length cannot be greater than 128 characters!",
+        "SUCCESS1": "Succesffuly created country",
+        "SUCCESS2": "Succesffuly updated country"
+    },
+    "COUNTRY_SEARCHBAR": {
+        "CODE": "Code",
+        "NAME": "Name"
+    },
+    "COUNTRY" :{
+        "NAME": "COUNTRIES"
+    },
+    "BUTTON": {
+        "SEARCH": "Search",
+        "CLEAR": "Clear"
+    },
+    "PAGING": {
+        "PAGE_SIZE": "Page"
+    }
+}

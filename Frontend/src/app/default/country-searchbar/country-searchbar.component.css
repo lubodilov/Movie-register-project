@@ -1,0 +1,9 @@
+.searchbar {
+    max-width: 200%;
+    margin: 0 auto 40px auto;
+}
+
+.search-btn {
+    color: #03586d;
+    background-color: rgb(226, 230, 39);
+}

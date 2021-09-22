@@ -1,0 +1,14 @@
+.text.danger {
+    color:red;
+}
+
+.search-btn {
+    color: white;
+    background-color: teal;
+}
+
+.alert-success{
+    width: 30%;
+    text-align: center;
+    left: 530px;
+}
